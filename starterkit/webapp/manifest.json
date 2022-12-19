@@ -121,7 +121,7 @@
                 {
                     "name": "Performance",
                     "pattern": "Performance",
-                    "target":[
+                    "target": [
                         "Performance"
                     ]
                 }
@@ -155,5 +155,9 @@
             "async": true,
             "id": "App"
         }
+    },
+    "sap.cloud": {
+        "public": true,
+        "service": "stk-starterkit"
     }
 }
