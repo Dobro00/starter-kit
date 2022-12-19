@@ -1,0 +1,41 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core" xmlns:f="sap.ui.layout.form" xmlns:l="sap.ui.layout">
+    <Dialog id="contactDialog" title="{i18n>ContactInformation}">
+        
+            <f:Form id="FormDisplay354" editable="false">
+                <f:layout>
+                    <f:ResponsiveGridLayout labelSpanXL="3" labelSpanL="3" labelSpanM="3" labelSpanS="12" adjustLabelSpan="false" emptySpanXL="4" emptySpanL="4" emptySpanM="4" emptySpanS="0" columnsXL="1" columnsL="1" columnsM="1" singleContainerFullSize="false" />
+                </f:layout>
+                <f:formContainers>
+                    <f:FormContainer>
+                        <f:formElements>
+                            <f:FormElement label="{i18n>Name}">
+                                <f:fields>
+                                    <Text text="{ContactName}" id="ContactName" />
+                                </f:fields>
+                            </f:FormElement>
+                            <f:FormElement label="{i18n>ContactTitle}">
+                                <f:fields>
+                                    <Text text="{ContactTitle}" id="ContactTitle" />
+                                </f:fields>
+                            </f:FormElement>
+                            <f:FormElement label="{i18n>Address}">
+                                <f:fields>
+                                    <Text text="{Address} {City} {Country}" id="Address" />
+                                </f:fields>
+                            </f:FormElement>
+                            <f:FormElement label="{i18n>Phone}">
+                                <f:fields>
+                                    <Text text="{Phone}" id="PhoneNumber" />
+                                </f:fields>
+                            </f:FormElement>
+                            <f:FormElement />
+                        </f:formElements>
+                    </f:FormContainer>
+                </f:formContainers>
+            </f:Form>
+        
+        <endButton>
+            <Button type="Reject" icon="sap-icon://decline" text="{i18n>Close}" press=".CloseFragment" />
+        </endButton>
+    </Dialog>
+</core:FragmentDefinition>

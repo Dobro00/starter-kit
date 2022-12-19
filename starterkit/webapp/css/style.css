@@ -1,0 +1,18 @@
+/* Enter your custom styles here */
+
+tr:nth-child(even) {
+    background-color: whitesmoke
+}
+
+tr:nth-child(odd) {
+    background-color: gainsboro;
+}
+
+html[dir="ltr"] .PerformanceClass .ButtonPossition.sapMBtn {
+    position: absolute;
+    left: 1px
+}
+
+html[dir="ltr"] .PerformanceClass .LeftMargin.sapMBtn {
+    margin-left: 0.9rem
+}

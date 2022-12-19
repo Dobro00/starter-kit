@@ -1,0 +1,3 @@
+<mvc:View xmlns="sap.m" controllerName="stk.starterkit.controller.Master" xmlns:mvc="sap.ui.core.mvc" displayBlock="true">
+    <Page id="page" title ="xd"/>
+</mvc:View>

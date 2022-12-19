@@ -1,0 +1,36 @@
+<mvc:View xmlns="sap.m" controllerName="stk.starterkit.controller.CustomersList" xmlns:mvc="sap.ui.core.mvc" displayBlock="true">
+    <App id="app">
+        <Page xmlns:cd="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1" id="CustomersList" title="{i18n>CustomersListTitle}">
+
+            <Button text="{i18n>CreateNewCustomer}" press="onNavtoCustomerCreate" class="sapUiMediumMarginBegin sapUiTinyMarginTopBottom" />
+            <Button text="{i18n>Performance}" press="onNavtoPerformance" class="sapUiMediumMarginBegin sapUiTinyMarginTopBottom" />
+            <content>
+                <Carousel height="25%" id='CustomersListCarousel'>
+                    <Image width="90%" height="100%" src="https://www.drupal.org/files/Capgemini_Logo_2COL_RGB.png" id="img1" />
+                    <Image width="90%" height="100%" src="https://www.drupal.org/files/Capgemini_Logo_2COL_RGB.png" id="img2" />
+                    <Image width="90%" height="100%" src="https://www.drupal.org/files/Capgemini_Logo_2COL_RGB.png" id="img3" />
+                    <Image width="90%" height="100%" src="https://www.drupal.org/files/Capgemini_Logo_2COL_RGB.png" id="img4" />
+                    <customLayout>
+                        <CarouselLayout visiblePagesCount="2" id="CarouselLayout" />
+                    </customLayout>
+                </Carousel>
+                <Table items="{/Customers}" id="table">
+                    <columns>
+                        <Column id="column1">
+                            <Label text="{i18n>CompanyName}" id="label1" />
+                        </Column>
+                        <Column id="column2">
+                            <Label text="{i18n>country}" id="label2" />
+                        </Column>
+                    </columns>
+                    <items>
+                        <ColumnListItem id="list1" type="Navigation" press="onCustomerPress">
+                            <Text text="{CompanyName}" id="text1" />
+                            <Text text="{Country}" id="text2" />
+                        </ColumnListItem>
+                    </items>
+                </Table>
+            </content>
+        </Page>
+    </App>
+</mvc:View>

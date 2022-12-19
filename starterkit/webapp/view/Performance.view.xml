@@ -1,0 +1,37 @@
+<mvc:View xmlns="sap.m" controllerName="stk.starterkit.controller.Performance" xmlns:mvc="sap.ui.core.mvc" displayBlock="true">
+    <App class="PerformanceClass">
+        <Shell>
+            <Page showNavButton="true" navButtonPress="ReturnToCustomerList" title="{i18n>Performance}" enableScrolling="true" titleAlignment="Center">
+                <content>
+                    <Table items="{path:'/Employees',parameters:{expand: 'Orders'}}">
+                        <columns>
+                            <Column>
+                                <Label text="{i18n>Name}" />
+                            </Column>
+                            <Column>
+                                <Label text="{i18n>Position}" />
+                            </Column>
+                            <Column>
+                                <Label text="{i18n>Orders}" />
+                            </Column>
+                            <Column>
+                                <Label text="{i18n>Actions}" />
+                            </Column>
+                        </columns>
+                        <items>
+                            <ColumnListItem>
+                                <Text text="{FirstName} {LastName}" />
+                                <Text text="{Title}" />
+                                <Text text="{= ${Orders}.length}" />
+                                <FlexBox>
+                                    <Button text="{i18n>Motivate}" press="onMotivate" />
+                                    <Button text="{i18n>Fire}" press="onFire" class="LeftMargin" />
+                                </FlexBox>
+                            </ColumnListItem>
+                        </items>
+                    </Table>
+                </content>
+            </Page>
+        </Shell>
+    </App>
+</mvc:View>

@@ -1,0 +1,20 @@
+<mvc:View xmlns:mvc="sap.ui.core.mvc"
+          xmlns:f="sap.ui.layout.form"
+          xmlns="sap.m"
+          xmlns:m="sap.m"
+          controllerName="stk.starterkit.controller.CreateCustomer">
+    <Page xmlns:cd="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1" id="CreateCustomer" title="{i18n>CreateNewCustomer}" showNavButton="true" navButtonPress="ReturnToCustomerList">
+    <headerContent>
+    <Button icon="sap-icon://accept" type="Accept"
+                    text="{i18n>Create}" press="CreateCustomer" />
+    </headerContent>
+        <f:SimpleForm editable="true" layout="ResponsiveGridLayout" >
+        <f:content>
+        	<m:Label text="{i18n>CustomerID}"/>
+			<m:Input id="CustomerID" description=" " fieldWidth="50%"/>
+            <m:Label text="{i18n>CustomerName}"/>
+			<m:Input id="CustomerName" description=" " fieldWidth="50%"/>
+        </f:content>
+        </f:SimpleForm>
+    </Page>
+</mvc:View>
